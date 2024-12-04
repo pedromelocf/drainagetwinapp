@@ -1,0 +1,25 @@
+{
+  "alerts": [
+    {
+      "id": 1,
+      "latitude": -30.033056,
+      "longitude": -51.230000,
+      "type": "Risco de Alagamento",
+      "timestamp": "14:30:00 2024-12-03"
+    },
+    {
+      "id": 2,
+      "latitude": -30.040000,
+      "longitude": -51.220000,
+      "type": "Risco de Alagamento",
+      "timestamp": "15:00:00 2024-12-03"
+    },
+    {
+      "id": 3,
+      "latitude": -30.050000,
+      "longitude": -51.210000,
+      "type": "Risco de Alagamento",
+      "timestamp": "15:30:00 2024-12-03"
+    }
+  ]
+}
