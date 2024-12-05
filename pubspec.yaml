@@ -29,19 +29,30 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/logo1.png
-    - assets/images/teste.png
-    - assets/images/alert_low.png
-    - assets/images/alert_far.png
-    - assets/json/alert_locations.json
+    - lib/assets/images/logo1.png
+    - lib/assets/images/alert_low.png
+    - lib/assets/images/alert_far.png
+    - lib/assets/json/alert_locations.json
 
 flutter_native_splash:
   color: "#01445f"
-  image: assets/images/logo1.png
+  image: "lib/assets/images/logo1.png"
   web: true
   android: true
+  ios : true
 
 flutter_launcher_icons:
-  android: true
+  android: "launcher_icon"
   ios: true
-  image_path: assets/images/logo1.png
+  image_path: "lib/assets/images/logo1.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "lib/assets/images/logo1.png"
+  windows:
+    generate: true
+    image_path: "lib/assets/images/logo1.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "lib/assets/images/logo1.png"
