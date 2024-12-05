@@ -48,7 +48,7 @@ Future<void> goToAlertLocation(double latitude, double longitude, Completer<Goog
     CameraUpdate.newCameraPosition(
       CameraPosition(
         target: LatLng(latitude, longitude),
-        zoom: 16.5,
+        zoom: 15.0,
       ),
     ),
   );
