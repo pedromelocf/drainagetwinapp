@@ -25,6 +25,15 @@ const String mapStyle = '''
       ]
     },
     {
+      "featureType": "administrative",
+      "elementType": "geometry",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
       "featureType": "administrative.country",
       "elementType": "geometry.stroke",
       "stylers": [
@@ -71,6 +80,14 @@ const String mapStyle = '''
     },
     {
       "featureType": "poi",
+      "stylers": [
+        {
+          "visibility": "off"
+        }
+      ]
+    },
+    {
+      "featureType": "poi",
       "elementType": "geometry",
       "stylers": [
         {
@@ -93,14 +110,6 @@ const String mapStyle = '''
       "stylers": [
         {
           "color": "#1d2c4d"
-        }
-      ]
-    },
-    {
-      "featureType": "poi.business",
-      "stylers": [
-        {
-          "visibility": "off"
         }
       ]
     },

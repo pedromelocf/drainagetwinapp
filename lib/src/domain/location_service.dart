@@ -1,14 +1,20 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:geocoding/geocoding.dart';
+import 'package:http/http.dart' as http;
 
 Future<String> getAddressFromCoordinates(double latitude, double longitude) async {
   try {
-    List<Placemark> placemarks = await placemarkFromCoordinates(latitude, longitude);
-    if (placemarks.isNotEmpty) {
-      Placemark place = placemarks[0];
-      return '${place.street}, ${place.administrativeArea}, ${place.country}';
+    final apiKey = 'APIKEY';
+    final url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=$latitude,$longitude&key=$apiKey';
+    final response = await http.get(Uri.parse(url));
+
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      final place = data['results'][0];
+      final formattedAddress = place['formatted_address'];
+      return formattedAddress;
     } else {
-      return 'Endereço não encontrado';
+      return 'Erro na solicitação: ${response.statusCode}';
     }
   } catch (e) {
     return 'Erro ao obter endereço: $e';
